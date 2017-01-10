@@ -1,6 +1,9 @@
 'use strict'
 
 function dataTypes(arg){
+	if (arg === 'undefined' || arg === null){
+			return "no value"
+	}
 	if ( arg.constructor === String ){
 		return arg.length
 	}
@@ -11,6 +14,7 @@ function dataTypes(arg){
 		return arg.valueOf()
 	}
 	if(arg.constructor === Number){
+		
 		if(arg < 100){
 			return "less than 100"
 		}
